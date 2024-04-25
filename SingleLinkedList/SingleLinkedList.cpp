@@ -7,7 +7,9 @@ struct Node {
     Node* next;
 };
 
-Node* START() {
+Node* START = NULL
+
+ {
     int nim;
     string nama;
     Node* nodeBaru = new Node();
@@ -41,6 +43,8 @@ Node* START() {
         previous = current;
         current = current->next;
     }
+    
+    
 }
 int main()
 {
