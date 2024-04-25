@@ -67,6 +67,10 @@ bool deleteNode(int nim) {
     {
         return true;
     }
+    else
+    {
+        return false;
+    }
 }
 int main()
 {
