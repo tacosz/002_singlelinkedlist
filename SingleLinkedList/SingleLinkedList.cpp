@@ -63,7 +63,10 @@ bool deleteNode(int nim) {
     {
         return false;
     }
-    
+    else if (current->noMhs == nim)
+    {
+        return true;
+    }
 }
 int main()
 {
