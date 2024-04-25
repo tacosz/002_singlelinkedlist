@@ -26,6 +26,7 @@ Node* START = NULL
             cout << "NIM sudah ada" << endl;
             return;
         }
+
         nodeBaru->next = START;
         START = nodeBaru;
         return;
@@ -45,8 +46,11 @@ Node* START = NULL
         current = current->next;
     }
     
-    
+    nodeBaru->next = current;
+    previous->next = nodeBaru;
 }
+
+bool
 int main()
 {
     
