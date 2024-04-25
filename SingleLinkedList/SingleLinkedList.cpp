@@ -24,6 +24,7 @@ Node* START = NULL
         if (START != NULL && nim == START->noMhs)
         {
             cout << "NIM sudah ada" << endl;
+            return;
         }
         nodeBaru->next = START;
         START = nodeBaru;
