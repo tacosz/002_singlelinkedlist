@@ -58,6 +58,12 @@ bool deleteNode(int nim) {
         previous = current;
         current = current->next;
     }
+
+    if (current == NULL)
+    {
+        return false;
+    }
+    
 }
 int main()
 {
