@@ -7,7 +7,7 @@ struct Node {
     Node* next;
 };
 
-Node* START = NULL
+Node* START = NULL;
 
  void addNode() {
     int nim;
@@ -50,32 +50,32 @@ Node* START = NULL
     previous->next = nodeBaru;
 }
 
-bool deleteNode(int nim) {
-    previous = START;
-    current = START;
-    while (current != NULL && nim > current->noMhs)
-    {
-        previous = current;
-        current = current->next;
-    }
+ bool searchNode(int nim, Node* current, Node* previous) {
+     previous = START;
+     current = START;
+     while (current != NULL && nim > current->noMhs)
+     {
+         previous = current;
+         current = current->next;
+     }
 
-    if (current == NULL)
-    {
-        return false;
-    }
-    else if (current->noMhs == nim)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+     if (current == NULL)
+     {
+         return false;
+     }
+     else if (current->noMhs == nim)
+     {
+         return true;
+     }
+     else
+     {
+         return false;
+     }
+ };
 bool deleteNode(int nim) {
     Node* current = START;
     Node* previous = START;
-    if (searchNode(nim, previous, currrent) == false)
+    if (searchNode(nim, previous, current) == false)
         return false;
     previous->next = current->next;
     if (current == START)
@@ -142,7 +142,7 @@ int main(){
             cout << "4. Cari Data" << endl;
             cout << "5. Keluar" << endl;
             cout << "Pilihan: ";
-            cin >> pilihan
+            cin >> pilihan;
                 switch (pilihan)
                 {
                 case 1:
@@ -154,7 +154,7 @@ int main(){
                 case 2:
                     if (listEmpty())
                     {
-                        cout << "List Kosong" << endl
+                        cout << "List Kosong" << endl;
                         system("pause");
                         system("cls");
                         break;
