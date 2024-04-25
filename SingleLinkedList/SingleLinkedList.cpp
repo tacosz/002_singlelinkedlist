@@ -23,6 +23,9 @@ Node* START() {
         {
             cout << "NIM sudah ada" << endl;
         }
+        nodeBaru->next = START;
+        START = nodeBaru;
+        return;
     }
 }
 int main()
