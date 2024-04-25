@@ -50,7 +50,15 @@ Node* START = NULL
     previous->next = nodeBaru;
 }
 
-bool
+bool deleteNode(int nim) {
+    previous = START;
+    current = START;
+    while (current != NULL && nim > current->noMhs)
+    {
+        previous = current;
+        current = current->next;
+    }
+}
 int main()
 {
     
