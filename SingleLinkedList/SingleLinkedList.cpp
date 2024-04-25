@@ -77,6 +77,10 @@ bool deleteNode(int nim) {
     Node* previous = START;
     if (searchNode(nim, previous, currrent) == false)
         return false;
+    previous->next = current->next;
+    if (current == START)
+        START = current->next;
+    return true;
 }
 int main()
 {
